@@ -1,0 +1,45 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    height: 100;
+}
+
+.section1{
+
+	height:2.5em;
+	background-color: whitesmoke;
+	padding-top: 40px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    width:auto;
+
+}
+.Logopadd{
+    padding-left: 70px;
+    padding-top: -19px;
+}
+/*.sectionLogo{
+    width: auto;
+	padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    float:left;
+}*/
+.section2{
+
+    height: 2em;
+    background-color:#D3D3D3;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    width:auto;
+}
+.logo1{
+
+    padding-left: 70;
+    padding-right: -19;
+}
