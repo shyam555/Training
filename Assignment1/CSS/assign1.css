@@ -7,9 +7,9 @@ body {
 
 .section1{
 
-	height: 150px;
-	background-color: whitesmoke;
-	/*padding-top: 50px;
+   	height: 150px;
+   	background-color: whitesmoke;
+ 	  /*padding-top: 50px;
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 150px;*/
@@ -29,15 +29,15 @@ body {
 }
 .section1-right{
 /*    border:1px solid red;
-*/    width: 58%;
+*/  width: 58%;
     float:right;
     height: 100%;
 }
 .section1-right-top{
-    margin-top: 2em;
-    height: 50%;
-    /*border:1px solid red;*/
-/*    border:1px solid red;
+     margin-top: 2em;
+     height: 50%;
+   /*border:1px solid red;*/
+/*   border:1px solid red;
 */
 }
 .section1-right-bottom{
@@ -50,9 +50,9 @@ body {
 
 }
 .link{
-text-decoration: none;
-padding-left: ; 
-float:left; 
+    text-decoration: none;
+    padding-left: ; 
+    float:left; 
 }
 input#image-button{
     background: white url('/home/webwerks/Training/Assignment1/images/top_search.png');
@@ -73,7 +73,7 @@ input[type="submit"] {
 .section2img{
     padding-left: 200px;
     padding-bottom: 0px;
-   float: left;
+    float: left;
 }
 .section2Text{
     /*padding-top: 0px;
@@ -89,7 +89,7 @@ input[type="submit"] {
 .section2Button{
     
     
-   cursor: pointer;
+    cursor: pointer;
     padding:15px;
     padding-right:30px; 
     float:left;
@@ -107,24 +107,24 @@ input[type="submit"] {
     background-image: url("/home/webwerks/Training/Assignment1/images/hbg2.png");
 }
 .sec3-sec1{
-width: 50%;
-float: left;
-/*padding: 50;*/
-/*padding-left: 200px;
-padding-top: 80px;
-padding-bottom: 100;
-padding-right: 250;*/
+    width: 50%;
+    float: left;
+    /*padding: 50;*/
+    /*padding-left: 200px;
+    padding-top: 80px;
+    padding-bottom: 100;
+    padding-right: 250;*/
 
 }
 .videobutton{
-     padding-top: 130px;
+    padding-top: 130px;
     padding-right: 80px;
     padding-bottom: 100px;
     padding-left: 400px;
 }
 .sec3-sec2{
-width: 50%;
-float: right;
+    width: 50%;
+    float: right;
 }
 .section3Button2{
     padding-top: 100px;
@@ -137,7 +137,7 @@ float: right;
     background-color: 9ACD32; 
     border: none;
     color: white;
-   padding: 15px 32px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -317,8 +317,8 @@ float: right;
 }
 .section6bottom-right-frame{
 
-   padding-top: 20px;
-   height: 500px; 
+    padding-top: 20px;
+    height: 500px; 
     background-color: white;
     float: left;
     /*border-style: ridge;*/
@@ -462,7 +462,7 @@ float: right;
 .section22img{
     padding-left: 300px;
     padding-bottom: 0px;
-   float: left;
+    float: left;
 }
 .section22Text{
     /*padding-top: 0px;
@@ -490,24 +490,17 @@ float: right;
     /*border:1px solid red;*/
     height: 200px;
     width: 100%;
-
-
-
 }
 .section10-top-left{
    /*border:1px solid red;*/
     height: 100%;
     width: 45%;
     float :left; 
-
-
 }
 .sectionLogo1{
     margin-top: 4em;
     margin-left: 15em;
     font-style: white;
-
-
 }
 .section10-top-right{
     /*border:1px solid red;*/
@@ -517,14 +510,12 @@ float: right;
     text-align: center;
     color: white;
     font-size: 20px;
-
 }
 .section10-top-right-para{
-     margin-top: 4em;
+    margin-top: 4em;
     /*margin-left: 10px;*/
     font-style: white;
     margin-right: 6em;
-
 }
 .section10-bottom{
     /*border:1px solid red;*/
@@ -550,13 +541,11 @@ float: right;
 
     /*float: right;*/
     margin-top: 1em;
-  /*  text-align: left;*/
+  /*text-align: left;*/
     margin-right: 5px;
     line-height: 1.8;
     margin-left: 225px;
     color: white;
-
-
 }
 .section10-bottom-middle-para{
 
@@ -567,9 +556,6 @@ float: right;
     line-height: 1.8;
     margin-left: 20px;
     color:white;
-
-
-
 }
 .section10-bottom-right-para{
 
@@ -584,8 +570,8 @@ float: right;
 
 ul{
 
-            list-style-image: url('images/icon8.png');
-            font-size:12px;
+    list-style-image: url('images/icon8.png');
+    font-size:12px;
 }
 .bigFont li{
     font-size:12px;
@@ -628,8 +614,6 @@ ul{
 }
 .section11-right-cont{
     color: white;
-
-
 }
 /*.twitimg li{
 
@@ -639,13 +623,13 @@ ul{
 
  #section222
 {
-background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
-height: 450px;
-width: 100%;
-border: 0px solid red;
-margin-top: 420px;
-padding-top: 10px;
-text-align: center;
+    background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
+    height: 450px;
+    width: 100%;
+    border: 0px solid red;
+    margin-top: 420px;
+    padding-top: 10px;
+    text-align: center;
 }
 #section222-heading
 {
@@ -682,7 +666,6 @@ text-align: center;
     float: left;
     width: 5%;
     text-align: left;
-
     border: 0px solid red;
 }
 .img4
@@ -697,7 +680,6 @@ text-align: center;
     float:left;
     width: 5%;
     text-align: left;
-
     border: 0px solid red;
 }
 .img6
@@ -725,7 +707,7 @@ text-align: center;
 
 .img9
 {
-   float: left;
+    float: left;
     width: 5%;
     text-align: left;
 }
