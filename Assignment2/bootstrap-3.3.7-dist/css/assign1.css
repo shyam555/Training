@@ -175,7 +175,7 @@ input[type="submit"] {
     background-color: #b8dd2e;
     border: none;
     color: white;
-    padding: 10px 60px;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -337,6 +337,8 @@ input[type="submit"] {
     height: 500px;
     background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
     /*border-style: ridge;*/
+
+
 
 }
 .sec7heading{
@@ -836,5 +838,39 @@ ul{
     background: #007299;
     box-shadow: none;
 }
+#sec8body{
+    height: 500px;
 
+}
+#sec8head{
+
+    height: 500px;
+    text-align: center;
+
+}
+#sec8imgsec{
+    margin-left: 20px;
+
+}
+#sec9body{
+    margin-top: 10px;
+
+}
+#sec9middle{
+    margin-top: 10px;
+
+}
+#sec10{
+    border-style: white;
+    height: 500px;
+    background-color: DimGray;
+    /*border:1px solid red;
+*/
+}
+.sec7{
+    margin-top: 20px;
+    /*height: 500px;
+    background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
+*/
+}
 
