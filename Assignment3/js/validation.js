@@ -33,13 +33,13 @@ function validateForm()
               return false;
          }else if(isNaN(document.myForm.phone.value)==true){
 
-              alert("Plz Enter correct mob number");
+              alert("Please Enter correct mob number");
               document.myForm.phone.focus();
 
               return false;
          }else if(document.myForm.phone.value.length < 10 || document.myForm.phone.value.length > 10){
 
-              alert("Plz Enter exact 10 digit mobile number");
+              alert("Please Enter exact 10 digit mobile number");
               document.myForm.phone.focus();
 
               return false;
@@ -51,7 +51,7 @@ function validateForm()
               return false;
          }else if(isNaN(document.myForm.office.value)==true){
 
-              alert("Plz Enter office number in digit format");
+              alert("Please Enter office number in digit format");
               document.myForm.office.focus();
 
               return false;
@@ -101,6 +101,13 @@ function validateForm()
             document.myForm.password2.focus();
 
             return false;
+
+          }else if(isNaN(document.myForm.year.value)==true){
+
+            alert("Please select DOB");
+            document.myForm.year.focus();
+
+            return false;
          }else if (genderM==false&&genderF==false){
             alert("Please seclect the gender.");
           
@@ -118,7 +125,6 @@ function validateForm()
             return true;    
 }
 
-
 function display()
 {
       var bmon = document.myForm.month.value;
@@ -132,8 +138,9 @@ function display()
 
       var display_year = to_year - byear;
       var display_month = to_month - bmon;
-      var display_age = display_year + display_month * 0.083;
+      var display_age = display_year + ( display_month * 0.083 );
 
-       /*alert("Please enter a valid e-mail address \n bmon"+bmon+"\n display_year"+display_year); */ 
+       /*alert(" \n bmon"+bmon+"\n display_year"+display_year); */
+        
       document.getElementById('demo123').value = display_age;
 }
