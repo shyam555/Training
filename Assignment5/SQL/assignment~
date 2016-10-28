@@ -1,0 +1,7 @@
+Assignment 4 (3 Hours)
+Description:	
+Please refer the sakilla database from MySQL and answer the questions below.
+1. Find all customers order between 1 Aug to 15 Aug with count.
+2. Select all orders of customers whose quantity is greater than 100
+3. Find customers products.
+4. Write a query to fetch total price of all the products ordered by each customer.

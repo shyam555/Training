@@ -1,0 +1,135 @@
+
+
+1. Find all customers order between 1 Aug to 15 Aug with count.
+2. Select all orders of customers whose quantity is greater than 100
+3. Find customers products.
+4. Write a query to fetch total price of all the products ordered by each customer.
+______________________________________________________________________
+
+1)
+
+SELECT customers.CustomerName,
+		 count(Orders.orderId) as Total_orders,
+		 Orders.orderId from customers
+		INNER JOIN Orders ON customers.CustomerId = Orders.CustomerId
+		where OrderDate between '2016-08-01' AND '2016-08-15' group by customers.CustomerId;
+
+2)
+
+SELECT customers.CustomerName,
+		 Orders.OrderId FROM customers
+		INNER JOIN Orders ON customers.CustomerId = Orders.CustomerId 
+		where Orders.OrderId in(select OrderId from orderdetails where Quantity > 100);
+
+3)
+
+SELECT CustomerName,ProductName from products,customers
+		where customers.CustomerId = products.CustomerId;
+
+4)
+
+SELECT customers.CustomerName,
+		products.ProductName,
+		orderdetails.Quantity,
+		products.Price,
+		orderdetails.Quantity * products.Price as 'TOTAL' FROM customers
+		JOIN Orders on customers.CustomerId = Orders.CustomerId
+		JOIN orderdetails on Orders.orderId = orderdetails.orderId
+		JOIN products on orderdetails.ProductId = products.ProductId;
+
+
+	
+
+
+
+___________________________________________________________
+
+SELECT * FROM  sakila.customer;
+
+select customer_id,last_name from sakila.customer;
+
+select distinct last_name from sakila.customer;
+
+SELECT * FROM sakila.customer WHERE customer_id=1;
+
+SELECT * FROM sakila.customer WHERE first_name='mary' AND last_name='smith';
+
+SELECT * FROM sakila.customer WHERE store_id=1 OR first_name='shyam';
+
+SELECT * FROM sakila.customer ORDER BY customer_id DESC, first_name ASC;
+
+INSERT INTO sakila.customer (first_name, last_name, email) VALUES ('shyam', 'Shinde', 'shyam.shinde@neosofttech.com');
+
+UPDATE sakila.customer
+SET first_name='shyam', store_id='1'
+WHERE first_name='MARY';
+
+SELECT *
+FROM sakila.customer
+LIMIT 5;
+
+SELECT * FROM sakila.customer
+WHERE first_name LIKE 's%';
+
+SELECT * FROM sakila.customer
+WHERE first_name LIKE '%s';
+
+SELECT * FROM sakila.customer
+WHERE first_name LIKE '%or%';
+
+SELECT * FROM sakila.customer
+WHERE first_name LIKE '_erlin';
+
+SELECT * FROM sakila.customer
+WHERE first_name LIKE 'L_n_on';
+
+SELECT * FROM sakila.customer
+WHERE first_name NOT LIKE '[bsp]%';
+
+SELECT * FROM sakila.customer
+WHERE store_id IN (1,2);
+
+SELECT * FROM sakila.customer
+WHERE store_id BETWEEN 1 AND 3;
+
+SELECT * FROM sakila.customer
+WHERE store_id NOT BETWEEN 1 AND 3;
+
+SELECT column_name AS alias_name
+FROM table_name;
+
+_________________________SQL Functions____________________
+
+AVG() - Returns the average value
+COUNT() - Returns the number of rows
+FIRST() - Returns the first value
+LAST() - Returns the last value
+MAX() - Returns the largest value
+MIN() - Returns the smallest value
+SUM() - Returns the sum
+
+CASE() - Converts a field to upper case
+LCASE() - Converts a field to lower case
+MID() - Extract characters from a text field
+LEN() - Returns the length of a text field
+ROUND() - Rounds a numeric field to the number of decimals specified
+NOW() - Returns the current system date and time
+FORMAT() - Formats how a field is to be displayed
+
+The HAVING clause was added to SQL because the WHERE keyword could not be used with aggregate functions.
+The IN operator allows you to specify multiple values in a WHERE clause.
+
+_______________________________________________________________________________________
+
+Create table customers(CustomerId int, CustomerName varchar(20));
+Create table Orders(orderId int,CustomerId int,orderDate date);
+Create table products(ProductId int,CustomerId int, ProductName varchar(20),Price int);
+
+
+
+
+
+
+
+
+
