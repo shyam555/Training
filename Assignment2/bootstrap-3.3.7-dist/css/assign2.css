@@ -101,11 +101,11 @@ input[type="submit"] {
     height: 50px;
     cursor: pointer;
 }
-#section3{
+/*#section3{
 
     height: 300px;
     background-image: url("/home/Training/Assignment1/images/hbg2.png");
-}
+}*/
 .sec3-sec1{
     width: 50%;
     float: left;

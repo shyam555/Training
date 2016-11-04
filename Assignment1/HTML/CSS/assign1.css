@@ -104,7 +104,7 @@ input[type="submit"] {
 .section3{
 
     height: 400px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/hbg2.png");
+    background-image: url('/home/webwerks/Training/Assignment1/HTML/images (2)/hbg2.png');
 }
 .sec3-sec1{
     width: 50%;
@@ -213,7 +213,7 @@ input[type="submit"] {
 }
 .section5{
     height: 400px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/hbg5.png");
+    background-image: url('/home/webwerks/Training/Assignment1/HTML/images/hbg6.png');
 }
 .sec5heading{
     height: 10px;
@@ -269,7 +269,7 @@ input[type="submit"] {
 }
 .section6{
     height: 700px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/hbg6.png");
+    background-image: url("/home/webwerks/Training/Assignment1/HTML/images/hbg6.png");
     /*border-style: ridge;*/
 }
 .section6top{
@@ -335,7 +335,7 @@ input[type="submit"] {
 }
 .section7{
     height: 500px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
+    background-image: url("/home/webwerks/Training/Assignment1/HTML/images/testimonial-bg.jpg");
     /*border-style: ridge;*/
 
 }
@@ -623,7 +623,7 @@ ul{
 
  #section222
 {
-    background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
+    background-image: url('/home/webwerks/Training/Assignment1/HTML/images/testimonial-bg.jpg');
     height: 450px;
     width: 100%;
     border: 0px solid red;
