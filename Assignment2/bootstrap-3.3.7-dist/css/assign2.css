@@ -55,7 +55,7 @@ body {
     float:left; 
 }
 input#image-button{
-    background: white url("/home/webwerks/Training/Assignment1/images/top_search.png");
+    background: white url("images/top_search.png");
     
 }
 input[type="submit"] {
@@ -213,7 +213,7 @@ input[type="submit"] {
 }
 .section5{
     height: 400px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/hbg5.png");
+    background-image: url("images/hbg5.png");
 }
 .sec5heading{
     height: 10px;
@@ -269,7 +269,7 @@ input[type="submit"] {
 }
 .section6{
     height: 700px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/hbg6s.png");
+    background-image: url("images/hbg6s.png");
     /*border-style: ridge;*/
 }
 .section6top{
@@ -335,7 +335,7 @@ input[type="submit"] {
 }
 .section7{
     height: 500px;
-    background-image: url("/home/webwerks/Training/Assignment1/images/testimonial-bg.jpg");
+    background-image: url("images/testimonial-bg.jpg");
     /*border-style: ridge;*/
 
 }
@@ -623,7 +623,7 @@ ul{
 
  #section222
 {
-    background-image: url("/home/webwerks/Training/Assignment1/HTML/images/testimonial-bg.jpg");
+    background-image: url("images/testimonial-bg.jpg");
     height: 500px;
     width: 100%;
     border: 0px solid red;
@@ -898,7 +898,7 @@ ul{
 #section7
 {
   height: 470px;
-  background-image: url("/home/webwerks/Training/Assignment1/HTML/images/testimonial-bg.jpg");
+  background-image: url("images/testimonial-bg.jpg");
   text-align: center;
 }
 #sec7cover{
