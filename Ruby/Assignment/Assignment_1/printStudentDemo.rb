@@ -1,4 +1,4 @@
-$some_hash = Hash.new
+$student_hash = Hash.new
 loop do	  
 	puts "\n___MENU____"
 	puts "1.Add record."
@@ -19,7 +19,7 @@ loop do
 			 sgrade = gets.chomp	
 			def mergStudent(input)
 			  case input
-			  when Hash then $some_hash.merge!(input)
+			  when Hash then $student_hash.merge!(input)
 			  end
 			end
 			mergStudent(sname => sgrade)
@@ -27,17 +27,17 @@ loop do
 			#puts "#{$some_hash}" 
 			 next
 		when 2 
-				$some_hash.each {|k, v| print k, " ", v, "\n"} 			 
+				$student_hash.each {|k, v| print k, " ", v, "\n"} 			 
 			 next
 		
 		when 3 
-				$some_hash.sort.each do |key, value|
+				$student_hash.sort.each do |key, value|
     				# Display the entry.
     				puts key + " " + String(value) 
 				end			 
 			 next
 		when 4 
-				result = $some_hash.sort{|x, y| x[1] <=> y[1]}
+				result = $student_hash.sort{|x, y| x[1] <=> y[1]}
 				result.each do |key, value| 
     			puts key + " " + String(value)
 				end		 
@@ -45,17 +45,16 @@ loop do
 		when 5
 				print "Enter grade:\t"
 				pgrade = gets.chomp
-				puts $some_hash.map {|k,v| v == pgrade ? k : nil} 	
+				puts $student_hash.map {|k,v| v == pgrade ? k : nil} 	
 			 next
 		when 6
 				print "Enter name:\t"
 				pname = gets.chomp
 				pname = pname.downcase				
-				puts $some_hash.map {|k,v| k == pname ? v : nil}
+				puts $student_hash.map {|k,v| k == pname ? v : nil}
 			 next
 		else
 			break
 	end
 break if gets.to_i >= 7
 end
-		
