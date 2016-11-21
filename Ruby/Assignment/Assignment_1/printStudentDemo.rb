@@ -14,7 +14,7 @@ loop do
 		when 1
 			 print "Enter Student Name:\t"
 			 sname = gets.chomp
-			 sname = sname.downcase
+			 #sname1 = sname.downcase
 			 print "Enter Grade:\t"
 			 sgrade = gets.chomp	
 			def mergStudent(input)
@@ -50,8 +50,8 @@ loop do
 		when 6
 				print "Enter name:\t"
 				pname = gets.chomp
-				pname = pname.downcase				
-				puts $student_hash.map {|k,v| k == pname ? v : nil}
+				#pname = pname.downcase				
+				puts $student_hash.map {|k,v| k.casecmp(pname) == 0 ? v : nil}
 			 next
 		else
 			break
