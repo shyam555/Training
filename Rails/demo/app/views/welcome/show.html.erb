@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @student.each do |s| %>
+    <tr>
+      <td><%= s.title %></td>
+      <td><%= s.text %></td>
+    </tr>
+  <% end %>
+</table>
