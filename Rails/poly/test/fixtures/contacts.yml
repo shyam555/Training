@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  add: MyString
+  mob_num: MyString
+
+two:
+  add: MyString
+  mob_num: MyString

@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
   def show
       @article = Article.find(params[:id])
   end
-  http_basic_authenticate_with name: "shyams", password: "p@ssw0rd", except: [:index, :show]
+  #http_basic_authenticate_with name: "shyams", password: "p@ssw0rd", except: [:index, :show]
   def index
       @articles = Article.all
   end
