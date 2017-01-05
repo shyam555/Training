@@ -1,0 +1,50 @@
+<% if current_user %>
+  <div class="col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Profile</div>
+        <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+      </div>
+      <div class="panel-body">
+        <div>
+          <%= link_to "Edit profile", edit_user_registration_path %>
+          <div>
+            <%= image_tag current_user.avatar, style: "width:100px;height:100px"%>
+            <h4><span class="name"><%= @user.name %></span></h4>
+            <span >Usename: <%= @user.username %></span><br>
+            <span >Email: <%= @user.email %></span><br>
+            <span >Account Created: <%= @user.created_at %></span>
+            <%= render 'shared/stats' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Your Tweets</div>
+        <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+      </div>
+      <div class="panel-body">
+        <% if @user.posts.present? %>
+          <% @user.posts.each do |post| %>
+            <span class="name"><%= @user.name.capitalize %>:</span>  
+            <span class="time"><%= time_ago_in_words(post.created_at) %> ago</span><br>
+            <p><nbsp><%= post.content %></p>
+            <p><%= image_tag post.picture, style: "width:100px;height:100px" if post.picture? %></p>
+            <%= link_to 'Delete Tweet', post_path(post), remote: true,method: :delete,data: { confirm: 'Are you sure?' } %>
+            <hr>
+          <% end %>
+        <%else%>
+          <h3>No posts available</h3>
+        <%end%>
+          <%= will_paginate @posts %><br>
+      </div>
+    </div>    
+  </div>
+<% end %>
+
+     
+
+

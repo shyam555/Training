@@ -1,0 +1,25 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4 class="name">Comment</h4>
+    <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+  </div>
+  <div class="panel-body">
+    <div class='col-sm- well'>
+      <%= form_for([@post, @post.comments.build]) do |f| %>
+        <p>
+          <%= f.label :Comment %><br>
+          <%= f.text_area :content, size: "30x3" %>
+        </p>
+          <%= f.submit "comment", class: "btn btn-primary" %>
+      <% end %>
+      <div>
+          <% @post.comments.each do |comment| %>
+            <% if comment.content.present? %>
+              <span class="name"><%= link_to comment.post.user.name, user_path(@post.user_id) %>:</span><br>
+              <%= comment.content %><br><hr>
+            <%end%>
+          <%end%>
+      </div>
+    </div>
+  </div>
+</div>  

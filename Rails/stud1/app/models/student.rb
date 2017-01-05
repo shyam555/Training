@@ -1,6 +1,7 @@
 class Student < ActiveRecord::Base
   validates :first_name, :last_name, :email_id, presence: true
                   #length: { minimum: 5 }
+  mount_uploader :picture, PictureUploader
   validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/,
   message: "only allows letters" }
 

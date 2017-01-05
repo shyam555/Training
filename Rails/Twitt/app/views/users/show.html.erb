@@ -1,0 +1,24 @@
+
+<div class="col-sm-7 well">
+<div>
+    <h4>Profile:</h4>
+    <div>
+        <%= image_tag @user.avatar, style: "width:100px;height:100px"%>
+        <h4><span class="name"><%= @user.name %></span></h4>
+        <span >Usename: <%= @user.username %></span><br>
+        <span >Email: <%= @user.email %></span><br>
+        <span >Account Created: <%= @user.created_at %></span><br>
+        <span class="name"><%= @user.followers.count %> Followers,</span>
+        <span class="name"><%= @user.following.count %> Following,</span> 
+        <span class="name"><%= @user.posts.count %> Tweets</span> 
+
+        <% if current_user.id != @user.id %>
+            <% if !current_user.following?(@user) %>
+             <%= render 'follow' %>
+            <% else %>
+             <%= render 'unfollow' %>
+            <%end%>
+        <% end %>
+    </div>
+</div>
+</div>

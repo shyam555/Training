@@ -1,0 +1,17 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= following_user_path(@user) %>">
+    <button class="btn btn-primary btn-sm" type="button">
+      following <span class="badge"><%= current_user.following.count %></span>
+    </button>
+  </a>
+  <a href="<%= followers_user_path(@user) %>">
+    <button class="btn btn-primary btn-sm" type="button">
+      followers <span class="badge"><%= current_user.followers.count %></span>
+    </button>
+  </a>
+  <button class="btn btn-primary btn-sm" type="button">
+      
+    Tweets <span class="badge"><%= @user.posts.size %></span>
+  </button>
+</div>

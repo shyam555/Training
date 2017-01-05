@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4 class="name">Users</h4>
+    <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+  </div>
+  <div class="panel-body">
+    <% @users.each do |user| %>
+    <div class="col-lg-4 well">
+    Profile Picture<br><span><%= image_tag user.avatar, style: "width:100px;height:100px" %></span><br>  
+    Name:<span class="name"><%= link_to user.name,user_path(user) %></span><br>
+    Username:<span class="name"><%= user.username %></span><br>
+    <span class="name"><%= user.followers.count %> Followers,</span>
+    <span class="name"><%= user.following.count %> Following,</span> 
+    <span class="name"><%= user.posts.count %> Tweets</span> 
+    </div>
+    <% end %>
+    <p><%= will_paginate @users %></p>
+  </div>
+</div>

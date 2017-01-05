@@ -1,0 +1,43 @@
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4>Post a Tweet</h4>
+    <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+  </div>
+  <div class="panel-body">
+    <p>
+    <%= form_for(@post, remote: true, html: { multipart: true }) do |f| %>
+      <%= f.text_area :content, size: "40x2" %><br>
+        <span class="picture">
+          <%= f.file_field :picture %>
+        </span><br>
+      <%= f.submit "Tweet", class: 'btn btn-primary btn-sm' %><hr>
+    <% end %>
+    </p>
+    <div class="pannel-body">
+     <% @posts.each do |post| %>
+        <span class="name"><%= link_to post.user.name, user_path(post.user_id) %>:</span>
+        <span class="time time_link_location"><%= time_ago_in_words(post.created_at) %> ago</span><br>
+        <p>  <nbsp><%= post.content %></p>
+        <p><%= image_tag post.picture, style: "width:100px;height:100px" if post.picture? %></p>
+        <% if post.retweet_id.present? %>
+          <% @retweet = Post.find(post.retweet_id) %>
+          <div class= "retweet">
+            <div class="border">
+              <span class=""><%= link_to @retweet.user.name,user_path(post.user_id) %>
+              <span class="time time_link_location"><%= time_ago_in_words(@retweet.created_at) %> ago</span><br>
+              <%= @retweet.content %><br><br>
+            </div>
+        </div>
+        <%end%>
+        <span class="comment_style">&nbsp;<%= link_to "comment",new_post_comment_path(post),class: "glyphicon glyphicon-comment" %>(<%= post.comments.count%>)</span>&nbsp;&nbsp;
+        <span class="comment_style"><%= link_to "retweet", new_retweet_path(id: post.id),class: "glyphicon glyphicon-retweet"%>(<%= post.retweets.count%>)</span>&nbsp;&nbsp;
+        <% if current_user.id == post.user.id %>
+        <span class="glyphicon glyphicon-trash delete_link_style"><%= link_to 'Trash', post_path(post),method: :delete,data: { confirm: 'Are you sure?' } %></span>
+        <%end%>
+        <hr>
+      <% end %>
+    </div>
+    <%= will_paginate @posts %><br>
+  </div>
+</div>

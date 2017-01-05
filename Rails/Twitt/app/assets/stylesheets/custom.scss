@@ -1,0 +1,58 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 10px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#logo {
+  float: left;
+  margin-right: 2px;
+  font-size: 1.7em;
+  color: '#ffaa00';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+.name{
+  color: blue;
+}
+.img_size{
+  width: 50px;
+  height: 50px;
+}
+.border{
+  border-style: groove;
+}
+.devise_error_border{
+  border: 1px solid red;  
+}
+.sidebar_width{
+  width: 280px;
+}
+.retweet{
+
+  padding: 20px;
+}
+.login_size{
+  
+}
+.comment_style{
+  word-spacing: -9px;
+}
+.time_link_location{
+    float: right;
+}
+.delete_link_style{
+  color: red;
+}
