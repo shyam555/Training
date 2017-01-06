@@ -1,18 +1,17 @@
 class PostsController < ApplicationController
   def index
-    @posts=Post.paginate(:page => params[:page], :per_page => 5)
+    @posts = Post.paginate(:page => params[:page], :per_page => 5)
     @post = Post.new
   end
 
   def show
     @user = User.find(params[:id])
-    @post = Post.new
     @posts = @user.posts.paginate(page: params[:page])
   end
 
   def create
     @user = User.find(current_user.id)
-    @post = @user.posts.new(post_params)
+    @post = @user.posts.create(post_params)
     if @post.save
       redirect_to posts_path 
     else
@@ -30,6 +29,7 @@ class PostsController < ApplicationController
   def show_images
     @posts = Post.all
   end
+
   private
   def post_params
     params.require(:post).permit(:content, :picture)

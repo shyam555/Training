@@ -8,13 +8,14 @@ class RetweetsController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @post = Post.find(params[:id])
-    @retweet = @post.retweets.build(retweet_permit)
+    @retweet = @post.retweets.create(retweet_permit)
     if @retweet.save
       redirect_to posts_path
     else
       render 'new'
     end
   end
+
   def show
     @post = Post.find(params[:id])
     @retweet = Post.find(params[:id])
