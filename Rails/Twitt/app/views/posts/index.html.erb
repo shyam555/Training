@@ -7,7 +7,7 @@
   <div class="panel-body">
     <p>
     <%= form_for(@post, remote: true, html: { multipart: true }) do |f| %>
-      <%= f.text_area :content, size: "40x2" %><br>
+      <%= f.text_area :content, size: "40x2"%><br>
         <span class="picture">
           <%= f.file_field :picture %>
         </span><br>
@@ -27,6 +27,7 @@
               <span class=""><%= link_to @retweet.user.name,user_path(post.user_id) %>
               <span class="time time_link_location"><%= time_ago_in_words(@retweet.created_at) %> ago</span><br>
               <%= @retweet.content %><br><br>
+              <%= image_tag @retweet.picture, style: "width:100px;height:100px" if @retweet.picture? %>
             </div>
         </div>
         <%end%>

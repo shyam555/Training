@@ -49,15 +49,17 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <% if user_signed_in? %>
-            <li><%= link_to "Home", posts_path  %></li>
-            <li><%= link_to "Profile",post_path(current_user)  %></li>
-            <li style="margin-left:710px"><%= link_to "Logout", destroy_user_session_path,method: :delete  %></li>
-            <% if current_user.avatar? %>
-                <%= link_to image_tag(current_user.avatar.url(:thumb),class: "img-circle img_size"),post_path(current_user) %>
-                <% end %>
+              <li><%= link_to "Home", posts_path  %></li>
+              <li><%= link_to "Profile",post_path(current_user)  %></li>
+              <li style="margin-left:710px"><%= link_to "Logout", destroy_user_session_path,method: :delete %></li>
+              <% if current_user.image? %>
+                  <%= link_to image_tag(current_user.image,class: "img-circle img_size"),post_path(current_user) %>
+                  <%else%>
+                    <%= link_to image_tag(current_user.avatar,class: "img-circle img_size"),post_path(current_user) %>
+              <% end %>
             <% else %>
-            <li style="margin-left:750px"><%= link_to "Login", posts_path  %></li>
-            <li><%= link_to "Signup", new_user_registration_path  %></li>
+              <li style="margin-left:750px"><%= link_to "Login", posts_path  %></li>
+              <li><%= link_to "Signup", new_user_registration_path  %></li>
             <%end%>
           </ul>
         </div>
@@ -67,21 +69,26 @@
     <div class="container">
       <div class="row">
           <% if user_signed_in? %>
-          <div class="col-lg-4 well">
-            <div>
-            <%= image_tag current_user.avatar, style: "width:100px;height:100px"%>
-            <h4><span class="name"><%= current_user.name %></span></h4>
-            <%= render 'shared/stats' %>
-          </div><br>
-          <div class="well sidebar-nav">
-            <!--<h3>Sidebar</h3>-->
-            <ul class="nav nav-list">
-              <!--<li class="nav-header">Sidebar</li>-->
-              <li><%= link_to "All User",  users_path  %></li>
-              <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
-              <li><%= link_to "Images",show_images_posts_path  %></li>
-            </ul>
-          </div>
+            <div class="col-lg-4 well">
+              <div>
+                <%if current_user.image? %>
+                  <%= image_tag current_user.image, style: "width:100px;height:100px"%>
+                  <h4><span class="name"><%= current_user.name %></span></h4>
+                <%else%>
+                  <%= image_tag current_user.avatar, style: "width:100px;height:100px"%>
+                  <h4><span class="name"><%= current_user.name %></span></h4>
+                <%end%>
+                <%= render 'shared/stats' %>
+            </div><br>
+            <div class="well sidebar-nav">
+              <!--<h3>Sidebar</h3>-->
+              <ul class="nav nav-list">
+                <!--<li class="nav-header">Sidebar</li>-->
+                <li><%= link_to "All User",  users_path  %></li>
+                <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
+                <li><%= link_to "Images",show_images_posts_path  %></li>
+              </ul>
+            </div>
           <%end%><!--/.well -->
         </div><!--/span-->
         <div class="col-lg-8">
@@ -89,12 +96,6 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-
-      <footer>
-        
-      </footer>
-
     </div> <!-- /container -->
-
   </body>
 </html>

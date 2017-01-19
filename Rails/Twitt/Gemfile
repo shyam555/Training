@@ -18,8 +18,10 @@ gem 'fog',                     '1.38.0'
 gem 'omniauth-facebook'
 gem 'omniauth'
 gem "omniauth-google-oauth2"
-gem "table_print"
-gem "awesome_print"
+gem 'omniauth-twitter'
+gem 'open-weather'
+gem 'rails_admin', '~> 1.0'
+
 
 
 # Use sqlite3 as the database for Active Record

@@ -9,7 +9,11 @@
         <div>
           <%= link_to "Edit profile", edit_user_registration_path %>
           <div>
-            <%= image_tag current_user.avatar, style: "width:100px;height:100px"%>
+            <% if current_user.avatar.present? %>
+              <%= image_tag current_user.avatar, style: "width:100px;height:100px"%>
+            <%else%>
+              <%= image_tag current_user.image, style: "width:100px;height:100px"%>
+            <%end%>
             <h4><span class="name"><%= @user.name %></span></h4>
             <span >Usename: <%= @user.username %></span><br>
             <span >Email: <%= @user.email %></span><br>

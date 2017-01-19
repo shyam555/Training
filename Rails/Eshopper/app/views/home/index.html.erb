@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <%= render '/commonrender/slider' %>
+        <div class="row">
+          <div class="col-sm-3">
+            <%= render '/commonrender/left_sidebar' %>
+          </div>
+          <div class="col-sm-9 padding-right">
+            <%= render 'index_category' %>
+            <%= render '/commonrender/recommended_items' %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

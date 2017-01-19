@@ -1,0 +1,55 @@
+ <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+----------------------------------------
+<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#slider-carousel" data-slide-to="1"></li>
+              <li data-target="#slider-carousel" data-slide-to="2"></li>
+-------------------------------------------
+<h1><span><%= @banners.first.title %></h1>
+                  <h2><%= @banners.first.content %></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <button type="button" class="btn btn-default get">Get it now</button>
+
+
+                        <%= image_tag "home/girl1.jpg", class: "girl img-responsive"%>
+                  <%= image_tag "home/pricing.png", class: "pricing"%>
+-------------------------------------------------
+user:references
+
+--------------
+<% if category.brands.present? %>
+                        <% category.brands.each do |brand| %>
+                          <ul>
+                            <li><a href="#"><%= brand.name %></a></li>
+                          </ul>
+                        <% end %>
+                      <%end%>
+-------------------------------------------------------------
+<%if @category.present? %>
+        <%if @category.subcategories.present? %>
+          <% @categories.each_with_index do |subcategory, index| %>
+            <% if subcategory.category_id == @category.id %>
+              <li data-target="#slider-carousel" data-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %>"></li>
+              <li><a href="#poloshirt" data-toggle="tab"><%= subcategory.name %></a></li>
+            <%end%>
+          <% end %>
+        <%end%>
+      <%end%>
+--------------------------------------
+<% @categories.each_with_index do |subcategory, index| %>
+        <% if subcategory.category_id != nil%>
+          <li data-target="#slider-carousel" data-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %>"></li>
+          <li><a href="#poloshirt" data-toggle="tab"><%= subcategory.name %></a></li>
+        <%end%>
+      <% end %>
+----------------------------------------
+t.string :name
+      t.string :sku
+      t.string :short_description
+      t.text :long_description
+      t.decimal :price
+      t.boolean :status
+      t.integer :quantity
+
+      t.timestamps null: false
+-----------------------------------
