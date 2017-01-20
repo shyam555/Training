@@ -26,8 +26,9 @@ class CartItemsController < ApplicationController
   # POST /cart_items.json
   def create
     @cart_item = CartItem.where(product_id: params[:product_id],user_id: current_user.id).first
+    #binding.pry
     if @cart_item.present?
-      @cart_item.quantity += 1 
+      @cart_item.quantity = @cart_item.quantity+1 
     else
       @cart_item = CartItem.new(product_id: params[:product_id],user_id: current_user.id)
     end
@@ -70,7 +71,7 @@ class CartItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart_item
-      #@cart_item = CartItem.find(params[:id])
+      @cart_item = CartItem.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
