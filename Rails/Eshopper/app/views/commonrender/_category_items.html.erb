@@ -29,7 +29,7 @@
                 <div class="single-products">
                   <div class="productinfo text-center">
                     <%= image_tag product.pictures.find_by(imageable_id: product.id).image %>
-                    <h2>Rs.<%=product.price%></h2>
+                    <h2>&#8377; <%=product.price%></h2>
                     <%= link_to product_path(product)do%>
                     <p><%=product.name%></p>
                     <%end%>

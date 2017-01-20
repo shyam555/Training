@@ -28,7 +28,7 @@ class CartItemsController < ApplicationController
     @cart_item = CartItem.where(product_id: params[:product_id],user_id: current_user.id).first
     #binding.pry
     if @cart_item.present?
-      @cart_item.quantity = @cart_item.quantity+1 
+      @cart_item.quantity += 1 
     else
       @cart_item = CartItem.new(product_id: params[:product_id],user_id: current_user.id)
     end

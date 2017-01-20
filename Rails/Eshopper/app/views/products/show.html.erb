@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-sm-3">
     <div class="product-image-wrapper">
@@ -6,7 +5,7 @@
         <div class="productinfo text-center">
           <%= image_tag @product.pictures.find_by(imageable_id: @product.id).image %>
           <h2>Rs.<%=@product.price%></h2>
-          <%= link_to product_path(@product)do%>
+          <%= link_to product_path(@product) do%>
           <p><%=@product.name%></p>
           <%end%>
           <%= link_to "Add to Cart",cart_items_path(product_id: @product.id), class: "fa fa-shopping-cart btn btn-default add-to-cart"%>

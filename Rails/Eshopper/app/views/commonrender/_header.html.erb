@@ -47,16 +47,13 @@
                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                 <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                
                   <%if current_user.cart_items.present? %>
-
                     <li><%= link_to cart_items_path do%> Cart (<%= current_user.cart_items.count%>)<% end %></li>
                   <%end%>
                 <li><%= link_to  destroy_user_session_path,method: :delete do%><i class="fa fa-sign-out" %>Logout</i><%end%></li>
               <%else%>
                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                <li><%= link_to new_user_session_path do%><i class="fa fa-sign-in" %>Login</i><%end%></li>
-                
+                <li><%= link_to new_user_session_path do%><i class="fa fa-sign-in" %>Login</i><%end%></li> 
               <%end%>
             </ul>
           </div>

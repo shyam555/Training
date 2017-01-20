@@ -2,7 +2,6 @@
   <div class="col-sm-12">
     <ul class="nav nav-tabs">
       <%if @category.present? %>
-        
           <% @categories.each_with_index do |subcategory, index| %>
             <% if subcategory.category_id == @category.id %>
             <%if @active.present?%>
@@ -11,7 +10,7 @@
                 <li data-target="#slider-carousel" data-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %>"></li>
               <%end%>
               <li><%= link_to category_path(id: @category.id,sub_category: subcategory.id) do %>
-                    <%=subcategory.name%>
+                <%=subcategory.name%>
               <%end%><li>
             <%end%>
           <% end %>
