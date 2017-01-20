@@ -25,7 +25,7 @@ class CartItemsController < ApplicationController
   # POST /cart_items
   # POST /cart_items.json
   def create
-    @cart_item = CartItem.where(product_id: params['product.id'],user_id: current_user.id).first
+    @cart_item = CartItem.where(product_id: params[:product_id],user_id: current_user.id).first
     #binding.pry
     if @cart_item.present?
       @cart_item.quantity = @cart_item.quantity+1 
