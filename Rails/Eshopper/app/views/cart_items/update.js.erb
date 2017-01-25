@@ -1,0 +1,4 @@
+
+$('#cart_item_count_'+<%= @cart_item.id %>).val(<%= @cart_item.quantity%>)
+$('#sub_total_'+<%= @cart_item.id %>).html('&#8377 '+<%= @cart_item.quantity*@cart_item.product.price%>)
+

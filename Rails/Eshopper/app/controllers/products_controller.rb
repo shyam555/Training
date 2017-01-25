@@ -10,8 +10,13 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @categories = Category.all
     @products = Product.all
     @product = Product.find(params[:id])
+    @cart_item = CartItem.new
+    @banners = Banner.all
+    @categories = Category.all
+    @category = Category.find(21)
   end
 
   # GET /products/new

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119125430) do
+ActiveRecord::Schema.define(version: 20170123121703) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20170119125430) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.integer  "quantity",   default: 1
+    t.integer  "quantity",   default: 0
     t.integer  "user_id"
     t.integer  "product_id"
     t.datetime "created_at",             null: false
@@ -109,6 +109,8 @@ ActiveRecord::Schema.define(version: 20170119125430) do
     t.string   "firstname"
     t.string   "lastname"
     t.boolean  "admin",                  default: false
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

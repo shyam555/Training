@@ -18,8 +18,8 @@ gem 'omniauth-facebook'
 gem 'omniauth'
 gem "omniauth-google-oauth2"
 gem 'omniauth-twitter'
-gem 'open-weather'
-gem 'bootstrap-sass', '3.3.6'
+#gem 'open-weather'
+#gem 'bootstrap-sass', '3.3.6'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'rails_admin', '~> 1.0'

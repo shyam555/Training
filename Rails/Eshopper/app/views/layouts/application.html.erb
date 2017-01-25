@@ -8,10 +8,11 @@
   </head>
   <body>
     <%= render '/commonrender/header' %>
-    
-    <p>
-      <div class="flash_bar_align"><div class="flash_text_align"><%= bootstrap_flash %></div></div>
-    </p>
+    <div id="flash">
+      <p>
+        <div class="flash_bar_align"><div class="flash_text_align" ><%= bootstrap_flash %></div></div>
+      </p>
+    </div>
     <%= yield %>
     <%= render '/commonrender/footer' %>
   </body>
